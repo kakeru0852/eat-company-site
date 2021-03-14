@@ -1,0 +1,220 @@
+.menu {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  margin: 0;
+  width: 50px;
+  height: 80px;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  & p {
+    color: black;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 30px;
+  }
+}
+.pc-only {
+  display: none;
+}
+
+.top-nav {
+  background-color: transparent;
+  & ul {
+    display: none;
+  }
+}
+.close {
+  @extend .menu;
+}
+
+.open {
+  @extend .menu;
+}
+.hero {
+  & h1 {
+    font-size: 30px;
+  }
+}
+input:checked ~ .mobile-menu {
+  display: block;
+}
+
+.main1 {
+  margin-bottom: 0;
+  margin-top: 50px;
+  &__container {
+    display: block;
+    padding: 0;
+
+    & .text {
+      width: 100%;
+      padding: 0 30px;
+      & .mobile-only {
+        display: block;
+        & h3 {
+          font-weight: 400;
+        }
+        & p {
+          color: #777;
+        }
+      }
+      & p {
+        font-size: 13px;
+      }
+    }
+    & .pict {
+      width: 100%;
+      max-width: 100%;
+      height: 80vw;
+      margin-top: 50px;
+    }
+    & a {
+      margin: 0;
+    }
+  }
+}
+.main2 {
+  padding-top: 50px;
+  padding-bottom: 0;
+  &__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__header {
+    margin: 0 auto 40px;
+    display: block;
+    & h2 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    & ul {
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    & a {
+      margin-top: 10px;
+    }
+  }
+  &__inner {
+    display: block;
+    & .picup1 {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 30px;
+      & img {
+        width: 100%;
+      }
+      & .pu-txt {
+        padding-bottom: 0;
+      }
+    }
+    & .picup2 {
+      width: 100%;
+      padding: 0;
+      & .pict-item {
+        width: 48%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+.main3 {
+  margin-top: 50px;
+  &__container {
+    padding: 0 30px;
+    & .item {
+      margin-bottom: 50px;
+      & .pict-a {
+        order: 1;
+        flex-basis: 100%;
+      }
+      & .pict {
+        &::after {
+          display: none;
+        }
+        &::before {
+          display: none;
+        }
+      }
+      & .txt {
+        order: 2;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        & .shop-name {
+          & p,
+          h3 {
+            color: white;
+          }
+        }
+        & .btn {
+          background-color: white;
+          &:hover {
+            color: white;
+            background-color: #125678;
+          }
+        }
+      }
+    }
+  }
+}
+.main4 {
+  margin-top: 50px;
+  & h2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 0;
+    width: 100%;
+  }
+  &__inner {
+    display: block;
+    height: 100%;
+    &-left {
+      width: 100%;
+      height: 100vw;
+    }
+    &-right {
+      width: 100%;
+      &-item {
+        width: 100%;
+        height: 100vw;
+      }
+    }
+    &-text {
+      font-size: 17px;
+      font-weight: 600;
+      & h3 {
+        color: white;
+      }
+    }
+  }
+}
+.main5 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__inner {
+    padding: 0 30px;
+    display: block;
+    &__txt {
+      width: 100%;
+      padding: 0;
+      & a {
+        margin: 0;
+      }
+    }
+    &__pict {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      margin-top: 30px;
+    }
+  }
+}
